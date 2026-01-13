@@ -1,14 +1,14 @@
-.gorputza{
+.gorputza {
   width: 100%;
   height: auto;
-  background-image:url(../../public/IMG/web_basura_orilla_4f151f7a30.png);
+  background-image: url(../../public/IMG/web_basura_orilla_4f151f7a30.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 20px;
   padding-top: 40px;
 }
 
-.card1, .card2{
+.card1, .card2 {
   margin-top: 100px;
   display: flex;
   background-color: #FDFEF1;
@@ -16,9 +16,8 @@
   align-items: center;
   padding: 10px;
   opacity: 0.8;
-
-  p{
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
+.card1 p, .card2 p {
+  margin-left: 20px;
+  margin-right: 20px;
+}/*# sourceMappingURL=app.css.map */
