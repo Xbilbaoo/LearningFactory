@@ -1,0 +1,92 @@
+<div id="contactar">
+  <div class="contenedorContactanos"> <!--Se crea un contenedor donde se añaden las dos columnas para la gestion del formulario-->
+    <div class="columnaIzquierda"></div>  <!--Esta columna contiene una imagen unicamente-->
+    <div class="columnaDerecha"> <!--Esta columna contiene el formulario-->
+      <h5>Confirma la compra</h5>
+      <form id="formulario">
+        <label for="fname" id="labelForm">Usuario:</label><br />
+        <input
+          type="text"
+          class="rellenar"
+          id="usuarioIntroducir"
+          name="usuario"
+          required
+          pattern="[A-Za-z0-9]{4,15}"
+          placeholder="Introduzca su usuario"
+          title="El usuario debe tener entre 4 y 15 caracteres y solo letras y números"
+        /><br /> <!--Se le especifica que el usuario debe tener x cantidad de caracteres y solo podra tener letras y numeros-->
+        <label for="fname" id="labelForm">Contraseña:</label><br />
+        <input
+          type="password"
+          class="rellenar"
+          id="contraseñaIntroducir"
+          name="contraseña"
+          required
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
+          maxlength="9"
+          title="Introduzca una contraseña adecuada"
+          placeholder="Introduzca su contraseña"
+        /><br /> <!--Se le especifica que es una contraseña y que tiene que tener minimo 8 caracteres, una minuscula y una mayuscula-->
+        <label for="fname" id="labelForm">Nº de Tarjeta:</label><br />
+        <input
+          type="text"
+          class="rellenar"
+          id="tarjetaIntroducir"
+          required
+          name="tarjeta"
+          placeholder="xxxx-xxxx-xxxx-xxxx"
+          pattern="[0-9]{16}"
+          maxlength="16"
+          title="La tarjeta debe tener exactamente 16 números"
+        /><br /> <!--Se le especifica que es un formato con 16 numeros justos y que solo acepta numeros-->
+        <label for="fname" id="labelForm">Telefono:</label><br />
+        <input
+          type="tel"
+          class="rellenar"
+          id="telefonoIntroducir"
+          name="telefono"
+          required
+          placeholder="xxxxxxxxx"
+          pattern="\d{9}"
+          maxlength="9"
+          title="Introduzca su numero de telefono"
+        /><br /> <!--Se le especifica que es un formato con 9 numeros en el que solo se aceptan numeros-->
+        <label for="fname" id="labelForm">Correo:</label><br />
+        <input
+          type="email"
+          class="rellenar"
+          id="correoIntroducir"
+          name="telefono"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Introduzca su correo electronico"
+          placeholder="xxxx@xxxx.xxx"
+        /><br /> <!--Se le especifica que el correo debe tener letras y numeros ademas de que debe tener un @-->
+        <label for="fname" id="labelForm">Direccion:</label><br />
+        <input
+          type="tel"
+          class="rellenar"
+          id="direccionIntroducir"
+          name="telefono"
+          required
+          pattern="[A-Za-z0-9\s.,ºª\-]{5,}"
+          title="Ingresa una dirección válida (mínimo 5 caracteres)"
+          placeholder="Donde vives?"
+        /><br /> <!--Se le especifica que la direccion tiene que tener un minimo de 5 caracteres-->
+        <label for="fname" id="labelForm">Cantidad:</label><br />
+        <input
+          type="tel"
+          class="rellenar"
+          id="cantidadIntroducir"
+          name="telefono"
+          required
+          pattern="\d{9}"
+          maxlength="9"
+          title="Introduzca la cantidad de maquinas que desea"
+          placeholder="xx"
+        /><br /><br /><!--Se le especifica que lo unico que se puede meter aqui son numero-->
+        <button type="submit" id="submit" name="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
