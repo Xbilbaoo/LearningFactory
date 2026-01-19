@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Formulario } from './formulario/formulario';
-import { SobreNosotros } from "./sobre-nosotros/sobre-nosotros";
+import { Header } from './components/header/header';
+import { Compra } from './components/compra/compra';
+import { Landing } from './components/landing/landing';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Formulario, SobreNosotros],
+  imports: [RouterOutlet, Compra, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
