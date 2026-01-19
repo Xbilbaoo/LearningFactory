@@ -18,12 +18,21 @@
     </svg>
   </div>
   <div>
-    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="6" r="2" fill="#74B1AB"/>
-      <circle cx="12" cy="12" r="2" fill="#74B1AB"/>
-      <circle cx="12" cy="18" r="2" fill="#74B1AB"/>
-    </svg>
+    <button (click)="showMenu()">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="6" r="2" fill="#74B1AB"/>
+        <circle cx="12" cy="12" r="2" fill="#74B1AB"/>
+        <circle cx="12" cy="18" r="2" fill="#74B1AB"/>
+      </svg>
+    </button>
   </div>
+  <nav id="dropdown">
+    <ul>
+      <li><a [routerLink]="['/Home']">Home</a></li>
+      <li><a [routerLink]="['/About']">About Us</a></li>
+      <li><a [routerLink]="['/Buy']">Buy Now</a></li>
+    </ul>
+  </nav>
 
   } @else {
 
@@ -31,7 +40,7 @@
     <img src="IMG/logo/logo.png" alt="Logo" />
     <h1>LearningFactory</h1>
   </div>
-  <nav clss="menu">
+  <nav>
     <ul>
       <li><a [routerLink]="['/Home']">Home</a></li>
       <li><a [routerLink]="['/About']">About Us</a></li>

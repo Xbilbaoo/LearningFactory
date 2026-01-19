@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.scss',
 })
 export class Header {
+  
   isMobile = false;
 
   constructor(
@@ -21,6 +22,27 @@ export class Header {
         this.isMobile = result.matches;
         this.cd.detectChanges();
       });
+  }
+
+  showMenu() {
+
+    const dropdown = document.getElementById("dropdown");
+    if (dropdown) {
+
+      if (dropdown.style.display === 'none') {
+
+        dropdown.style.display = 'flex'
+
+      } else {
+
+        dropdown.style.display = 'none'
+
+      }
+
+      
+
+    }
+
   }
 }
 
