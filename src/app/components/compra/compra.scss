@@ -18,13 +18,15 @@
         width: 86.4px;
         height: 100%;
         transition: transform 0.3s ease-in-out;
+
+        &:hover{
+          border: solid 2px #87A1Ab;
+          margin-right: -24px;
+          transform: scale(1.1);
+        }
+
       }
 
-      img:hover{
-        border: solid 2px #87A1Ab;
-        margin-right: -24px;
-        transform: scale(1.1);
-      }
     }
 
     .irudiNagusi{
@@ -46,6 +48,10 @@
     h6{
       color: #44AE56;
     }
+  }
+
+  .slider{
+    display: none;
   }
 
   .compra{
@@ -74,4 +80,40 @@
 .bloque{
   margin: 20px;
   text-align: justify;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .gorputza{
+    display: grid;
+    grid-template-columns: auto;
+
+    .irudiak{
+      display: none;
+    }
+
+    .texto{
+      display: none;
+    }
+
+    .slider{
+      display: block;
+    }
+
+    .compra{
+      width: 100%;
+      padding:0px;
+
+      h3, p{
+        margin: 12px;
+      }
+
+      button{
+        width: 80%;
+        margin-left: 8%;
+        margin-bottom: 6px;
+      }
+
+    }
+  }
 }
