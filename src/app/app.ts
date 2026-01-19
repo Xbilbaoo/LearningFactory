@@ -6,7 +6,7 @@ import { Landing } from './components/landing/landing';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Compra, Header],
+  imports: [RouterOutlet, Compra, Header, Landing],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
