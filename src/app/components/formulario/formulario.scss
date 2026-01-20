@@ -1,4 +1,4 @@
-@import '../../styles.scss'; //Se importan la lista de colores de el archivo styles.scss
+@import '../../../styles.scss'; //Se importan la lista de colores de el archivo styles.scss
 
 #contactar { //se le añade las distancias minimas de la ventana
   margin: 0;
@@ -54,7 +54,7 @@ h5 { //se personaliza el titulo para que sea acorde a nuestras peticiones
   font-weight: 300;
 }
 
-#labelForm { 
+#labelForm {
   color: $iron-grey;
   text-transform: uppercase;
   font-size: 0.8rem;
