@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.scss',
 })
 export class Header {
-  
+
   isMobile = false;
 
   constructor(
@@ -33,16 +33,28 @@ export class Header {
 
         dropdown.style.display = 'flex'
 
-      } else {
-
-        dropdown.style.display = 'none'
-
-      }
-
+      } else { 
+        
+        dropdown.style.display = 'none' 
       
+      }
 
     }
 
   }
+
+  changeBg() {
+
+    const body = document.querySelector("body")
+    console.log(body); 
+
+    if (body) {
+
+      body.style.backgroundImage = "/IMG/web_basura_orilla_4f151f7a30.png"
+      console.log(body);
+
+    }
+  }
+
 }
 

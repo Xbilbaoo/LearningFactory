@@ -47,7 +47,8 @@ $gradient-radial: radial-gradient(#404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #4
 
 body {
   
-  background-color: $ivory;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
   
