@@ -3,10 +3,13 @@
     padding: 10px;
     color: #FDFFE1;
     background-color: rgba(64, 75, 78, 0.8);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
     div {
 

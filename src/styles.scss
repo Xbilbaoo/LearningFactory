@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* SCSS HEX */
 $iron-grey: #404b4eff;
-$cool-steel: #87a1abff;
+$cool-steel: #87a1ab;
 $ivory: #fdfef1ff;
 $emerald: #73c27dff;
 $medium-jungle: #44ae56ff;
@@ -46,7 +46,9 @@ $gradient-bottom-left: linear-gradient(
 $gradient-radial: radial-gradient(#404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
 
 body {
+  
   background-color: $ivory;
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  
 }
