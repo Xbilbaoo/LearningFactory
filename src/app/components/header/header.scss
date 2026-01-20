@@ -26,10 +26,8 @@
 
                 transition: transform 0.5s;
 
-                &:hover,
-                &:active {
+                &:hover, &:focus {
 
-                    cursor: pointer;
                     transform: rotate(90deg);
 
                 }
@@ -58,14 +56,14 @@
 
             li {
                 a {
+
                     display: inline-block;
                     text-decoration: none;
                     color: #FDFFE1;
                     transition: transform 0.5s;
 
-                    &:hover {
-                        transform: scale(1.2);
-                    }
+                    &:hover { transform: scale(1.2); }
+
                 }
             }
         }
@@ -82,7 +80,6 @@
         nav {
 
             width: 100%;
-            display: none;
     
             ul {
     
