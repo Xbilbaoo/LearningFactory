@@ -1,23 +1,24 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'header-component',
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
-  
-  isMobile = false;
+
+  isMobile = false
+  toggleDropdown = false
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef, private router: Router
   ) {
     this.breakpointObserver
-      .observe([Breakpoints.Handset, '(max-width: 767px)'])
+      .observe('(max-width: 767px)')
       .subscribe(result => {
         this.isMobile = result.matches;
         this.cd.detectChanges();
@@ -26,23 +27,41 @@ export class Header {
 
   showMenu() {
 
-    const dropdown = document.getElementById("dropdown");
-    if (dropdown) {
+    this.toggleDropdown = !this.toggleDropdown
 
-      if (dropdown.style.display === 'none') {
-
-        dropdown.style.display = 'flex'
-
-      } else {
-
-        dropdown.style.display = 'none'
-
-      }
-
-      
-
-    }
 
   }
+
+  navigate(where: string) {
+
+    switch (where) {
+
+      case "home":
+
+        this.router.navigate(['/Home'])
+        this.toggleDropdown = false
+        break
+
+      case "about":
+
+        this.router.navigate(['/About'])
+        this.toggleDropdown = false
+        break
+
+      case "buy":
+
+        this.router.navigate(['/Buy'])
+        this.toggleDropdown = false
+        break
+
+      default:
+
+        this.router.navigate(['/Home'])
+        this.toggleDropdown = false
+        break
+
+    }
+  }
+
 }
 
