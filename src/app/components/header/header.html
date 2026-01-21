@@ -17,7 +17,7 @@
     </button>
   </div>
   @if (toggleDropdown) {
-  <nav id="dropdown">
+  <nav>
     <ul>
       <li><a (click)="navigate('home')">Home</a></li>
       <li><a (click)="navigate('about')">About Us</a></li>
@@ -35,8 +35,8 @@
   <nav>
     <ul>
       <li><a [routerLink]="['/Home']">Home</a></li>
-      <li><a [routerLink]="['/About']">Sobre Nosotros</a></li>
-      <li><a [routerLink]="['/Buy']">Compra Ya</a></li>
+      <li><a [routerLink]="['/About']">About Us</a></li>
+      <li><a [routerLink]="['/Buy']">Buy Now</a></li>
     </ul>
   </nav>
   }

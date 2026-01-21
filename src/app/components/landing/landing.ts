@@ -7,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrl: './landing.scss',
 })
 export class Landing {
+texto1 = false;
+texto2 = false;
+descripcion(cardNum : number) {
+
+  switch (cardNum) {
+
+    case 1:
+
+    this.texto1 = !this.texto1
+    break;
+
+    case 2:
+
+    this.texto2 = !this.texto2
+    break;
+
+  }
+}
 
 }

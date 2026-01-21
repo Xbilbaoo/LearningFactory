@@ -1,5 +1,5 @@
 .gorputza{
-  
+
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     color: black;
   }
 
-  p {
+  .i {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -53,9 +53,10 @@
 
     a {
       display: block;
+      cursor: pointer;
     }
 
-    p {
+    .i {
       display: none;
     }
   }
@@ -71,9 +72,10 @@
 
     a {
       display: block;
+      cursor: pointer;
     }
 
-    p {
+    .i {
       display: none;
     }
   }

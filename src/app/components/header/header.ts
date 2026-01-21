@@ -20,10 +20,10 @@ export class Header {
     this.breakpointObserver
       .observe('(max-width: 767px)')
       .subscribe(result => {
-        this.isMobile = result.matches;
-        this.cd.detectChanges();
-      });
-  }
+        this.isMobile = result.matches
+        this.cd.detectChanges()
+      })  
+    }
 
   showMenu() {
 
@@ -61,6 +61,7 @@ export class Header {
         break
 
     }
+    
   }
 
 }

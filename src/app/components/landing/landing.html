@@ -1,5 +1,7 @@
 <div class="gorputza">
+
   <section class="card1">
+
     <iframe
       class="video"
       src="https://www.youtube.com/embed/fC41RR4yodg?si=YmfEuC48NpETsKp8"
@@ -8,34 +10,81 @@
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     ></iframe>
-    <a href="#"><b>Plasticos en el mar</b></a>
-    <p>
-      Las "enormes bases flotantes de plástico en el Océano", conocidas como Islas de Basura, son
-      concentraciones masivas de desechos no biodegradables, principalmente plásticos, atrapadas por
-      los giros oceánicos (vórtices de corrientes marinas), formando grandes "sopas" o balsas
-      flotantes, siendo la más famosa la Gran Mancha de Basura del Pacífico (entre Hawái y
-      California), que se estima en más de 1.6 millones de km², una grave amenaza para la vida
-      marina, compuesta por microplásticos y desechos mayores como redes de pesca, y existen otras
-      cuatro manchas principales en los océanos Atlántico Norte, Índico, Pacífico Sur y Atlántico
-      Sur.
+
+    <a (click)="descripcion(1)"><b>Plasticos en el mar</b></a>
+
+    <p class="i">
+    En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
+    la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
+    arrojan al mar más de 13 millones de toneladas de plásticos. Debido a que durante muchas
+    décadas, prácticamente todo el mundo ha estado arrojando de manera inconsciente plástico al
+    mar, por lo que se calcula que para el año 2050 es probable que haya más plásticos que peces
+    en los mares. Es importante saber que los desechos plásticos tardan en degradarse entre 500 y
+    1000 años. Por lo que si no se recuperan y reciclan, inevitablemente están destinados a
+    contaminar el medio ambiente y por consiguiente nuestra salud. El plástico está en casi todas
+    partes y la creciente tasa de contaminación plástica incluso se agrava debido al aumento del
+    consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
+    crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
     </p>
+
+    @if (texto1) {
+
+    <p>
+    En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
+    la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
+    arrojan al mar más de 13 millones de toneladas de plásticos. Debido a que durante muchas
+    décadas, prácticamente todo el mundo ha estado arrojando de manera inconsciente plástico al
+    mar, por lo que se calcula que para el año 2050 es probable que haya más plásticos que peces
+    en los mares. Es importante saber que los desechos plásticos tardan en degradarse entre 500 y
+    1000 años. Por lo que si no se recuperan y reciclan, inevitablemente están destinados a
+    contaminar el medio ambiente y por consiguiente nuestra salud. El plástico está en casi todas
+    partes y la creciente tasa de contaminación plástica incluso se agrava debido al aumento del
+    consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
+    crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
+    </p>
+
+    }
+
   </section>
 
   <section class="card2">
+
     <img class="imagen" src="../../../../IMG/fotos/plasticoBosque.jpg" alt="imagen de un bosque" />
-    <a href="#"><b>Plasticos en el bosque</b></a>
-    <p>
-      En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
-      la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
-      arrojan al mar más de 13 millones de toneladas de plásticos. Debido a que durante muchas
-      décadas, prácticamente todo el mundo ha estado arrojando de manera inconsciente plástico al
-      mar, por lo que se calcula que para el año 2050 es probable que haya más plásticos que peces
-      en los mares. Es importante saber que los desechos plásticos tardan en degradarse entre 500 y
-      1000 años. Por lo que si no se recuperan y reciclan, inevitablemente están destinados a
-      contaminar el medio ambiente y por consiguiente nuestra salud. El plástico está en casi todas
-      partes y la creciente tasa de contaminación plástica incluso se agrava debido al aumento del
-      consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
-      crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
+
+    <a (click)="descripcion(2)"><b>Plasticos en el bosque</b></a>
+
+    <p class="i">
+    En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
+    la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
+    arrojan al mar más de 13 millones de toneladas de plásticos. Debido a que durante muchas
+    décadas, prácticamente todo el mundo ha estado arrojando de manera inconsciente plástico al
+    mar, por lo que se calcula que para el año 2050 es probable que haya más plásticos que peces
+    en los mares. Es importante saber que los desechos plásticos tardan en degradarse entre 500 y
+    1000 años. Por lo que si no se recuperan y reciclan, inevitablemente están destinados a
+    contaminar el medio ambiente y por consiguiente nuestra salud. El plástico está en casi todas
+    partes y la creciente tasa de contaminación plástica incluso se agrava debido al aumento del
+    consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
+    crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
     </p>
+
+    @if (texto2) {
+
+    <p>
+    En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
+    la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
+    arrojan al mar más de 13 millones de toneladas de plásticos. Debido a que durante muchas
+    décadas, prácticamente todo el mundo ha estado arrojando de manera inconsciente plástico al
+    mar, por lo que se calcula que para el año 2050 es probable que haya más plásticos que peces
+    en los mares. Es importante saber que los desechos plásticos tardan en degradarse entre 500 y
+    1000 años. Por lo que si no se recuperan y reciclan, inevitablemente están destinados a
+    contaminar el medio ambiente y por consiguiente nuestra salud. El plástico está en casi todas
+    partes y la creciente tasa de contaminación plástica incluso se agrava debido al aumento del
+    consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
+    crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
+    </p>
+
+    }
+
+
   </section>
 </div>
