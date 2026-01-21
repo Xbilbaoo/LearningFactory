@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
 body {
-  margin: 0px;
+  background-color: rgb(253, 254, 241);
   padding: 0px;
+  margin: 0px;
 }/*# sourceMappingURL=styles.css.map */

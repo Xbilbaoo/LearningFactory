@@ -1,3 +1,7 @@
+main {
+  background-color: #ffffff;
+}
+
 .gorputza{
   display: flex;
   margin: 20px;
@@ -24,9 +28,7 @@
           margin-right: -24px;
           transform: scale(1.1);
         }
-
       }
-
     }
 
     .irudiNagusi{
@@ -61,7 +63,7 @@
     padding: 8px;
 
     h3{
-      color:#44AE56;;
+      color:#44AE56;
     }
 
     button{
@@ -71,10 +73,8 @@
       padding: 8px;
       background-color: #404B4E;
       color: white;
-
     }
   }
-
 }
 
 .bloque{
@@ -113,7 +113,6 @@
         margin-left: 8%;
         margin-bottom: 6px;
       }
-
     }
   }
 }
