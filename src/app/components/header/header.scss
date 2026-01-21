@@ -5,7 +5,6 @@
     background-color: rgba(64, 75, 78, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
@@ -38,11 +37,15 @@
 
         img {
 
-            width: 50px;
-            height: 50px;
+      svg {
+        transition: transform 0.5s;
 
+        &:hover,
+        &:active {
+          cursor: pointer;
+          transform: rotate(90deg);
         }
-
+      }
     }
 
     nav {
@@ -67,19 +70,18 @@
                 }
             }
         }
+      }
     }
-
+  }
 }
 
 @media (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
 
-    .header {
-
-        flex-wrap: wrap;
-
-        nav {
-
-            width: 100%;
+    nav {
+      width: 100%;
+      display: none;
     
             ul {
 
@@ -102,7 +104,9 @@
                     }
                 }
             }
+          }
         }
+      }
     }
 
 }
