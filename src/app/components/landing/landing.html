@@ -1,7 +1,8 @@
 <div class="gorputza">
 
+  <!--Card1 contiene video + texto-->
   <section class="card1">
-
+    <!--Video-->
     <iframe
       class="video"
       src="https://www.youtube.com/embed/fC41RR4yodg?si=YmfEuC48NpETsKp8"
@@ -10,9 +11,9 @@
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     ></iframe>
-
+    <!--Enlace para la pantalla pequeña-->
     <a (click)="descripcion(1)"><b>Plasticos en el mar</b></a>
-
+    <!--Texto en pantalla grande-->
     <p class="i">
     En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
     la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
@@ -27,6 +28,7 @@
     crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
     </p>
 
+    <!--Texto para pantalla pequeña( Aparecera al darle click al link de arriba )-->
     @if (texto1) {
 
     <p>
@@ -46,13 +48,13 @@
     }
 
   </section>
-
+  <!--Card2 continene imagen + texto-->
   <section class="card2">
-
+    <!--Imagen-->
     <img class="imagen" src="../../../../IMG/fotos/plasticoBosque.jpg" alt="imagen de un bosque" />
-
+    <!--Enlace para la pantalla pequeña-->
     <a (click)="descripcion(2)"><b>Plasticos en el bosque</b></a>
-
+    <!--Texto en pantalla grande-->
     <p class="i">
     En la actualidad, lo que en realidad representa un problema para el medio ambiente es más bien
     la gestión y el uso incorrecto de los residuos de plástico. Lamentablemente cada año se
@@ -66,7 +68,7 @@
     consumo y al crecimiento de la población. Debido a que con el aumento de la población y el
     crecimiento urbano, aumenta la demanda de materiales más baratos y fácilmente disponibles.
     </p>
-
+    <!--Texto para pantalla pequeña( Aparecera al darle click al link de arriba )-->
     @if (texto2) {
 
     <p>
@@ -84,7 +86,5 @@
     </p>
 
     }
-
-
   </section>
 </div>

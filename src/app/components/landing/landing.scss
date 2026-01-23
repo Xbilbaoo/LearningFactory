@@ -1,5 +1,5 @@
+/*Estilos del bloque global*/
 .gorputza{
-
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   padding-bottom: 20px;
   padding-top: 40px;
 }
-
+/*Estilo de los cards*/
 .card1,
 .card2 {
   margin-top: 100px;
@@ -17,31 +17,33 @@
   align-items: center;
   padding: 10px;
   opacity: 0.95;
-
+  /*Estilos para el link*/
   a {
     display: none;
     text-align: center;
     text-decoration: none;
     color: black;
   }
-
+  /*Estilos texto*/
   .i {
     margin-left: 20px;
     margin-right: 20px;
   }
-
+  /*Estilos video*/
   .video {
     width: 350vw;
     height: 50vh;
   }
-
+  /*Estilos imagen*/
   img {
     width: 50vw;
     height: 50vh;
   }
 }
 
+/*Estilos pantaña pequeña(*/
 @media screen and (max-width: 1000px) {
+  /*Estilos card1 y sus componentes*/
   .card1 {
     display: grid;
     grid-template-columns: auto;
@@ -60,7 +62,7 @@
       display: none;
     }
   }
-
+  /*Estilos card2 y sus componentes*/
   .card2 {
     display: grid;
     grid-template-columns: auto;

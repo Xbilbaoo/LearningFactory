@@ -1,48 +1,71 @@
+@charset "UTF-8";
+/*Estilos del bloque global*/
 .gorputza {
   width: 100%;
   height: auto;
-  background-image: url(../../../../public/IMG/web_basura_orilla_4f151f7a30.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 20px;
   padding-top: 40px;
 }
 
-.card1, .card2 {
+/*Estilo de los cards*/
+.card1,
+.card2 {
   margin-top: 100px;
   display: flex;
-  background-color: #FDFEF1;
+  background-color: #fdfef1;
   text-align: justify;
   align-items: center;
   padding: 10px;
-  opacity: 0.8;
+  opacity: 0.95;
+  /*Estilos para el link*/
+  /*Estilos texto*/
+  /*Estilos video*/
+  /*Estilos imagen*/
 }
-.card1 a, .card2 a {
+.card1 a,
+.card2 a {
   display: none;
   text-align: center;
   text-decoration: none;
   color: black;
 }
-.card1 p, .card2 p {
+.card1 .i,
+.card2 .i {
   margin-left: 20px;
   margin-right: 20px;
 }
+.card1 .video,
+.card2 .video {
+  width: 350vw;
+  height: 50vh;
+}
+.card1 img,
+.card2 img {
+  width: 50vw;
+  height: 50vh;
+}
 
+/*Estilos pantaña pequeña(*/
 @media screen and (max-width: 1000px) {
+  /*Estilos card1 y sus componentes*/
   .card1 {
     display: grid;
     grid-template-columns: auto;
   }
-  .card1 video {
+  .card1 .video {
     width: 100%;
-    height: auto;
+    height: 50vh;
   }
   .card1 a {
     display: block;
+    cursor: pointer;
   }
-  .card1 p {
+  .card1 .i {
     display: none;
   }
+  /*Estilos card2 y sus componentes*/
   .card2 {
     display: grid;
     grid-template-columns: auto;
@@ -53,8 +76,9 @@
   }
   .card2 a {
     display: block;
+    cursor: pointer;
   }
-  .card2 p {
+  .card2 .i {
     display: none;
   }
 }/*# sourceMappingURL=landing.css.map */

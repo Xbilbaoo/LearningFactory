@@ -9,5 +9,11 @@ import { Carousel } from '../carousel/carousel';
   styleUrl: './compra.scss',
 })
 export class Compra {
+imagenActual: string = '../../../../IMG/web_basura_orilla_4f151f7a30.png';
+
+cambiarImagen(img : string) {
+  this.imagenActual=img;
+
+}
 
 }

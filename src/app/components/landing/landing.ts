@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './landing.scss',
 })
 export class Landing {
+
 texto1 = false;
 texto2 = false;
+/*Recibe numero del html y dependiendo de el muestra un texto u otro*/
 descripcion(cardNum : number) {
 
   switch (cardNum) {

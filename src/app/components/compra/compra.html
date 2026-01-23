@@ -3,17 +3,17 @@
   <!--Imagenes laterales en la pantalla grande-->
   <div class="irudiak">
     <div class="irudiTxiki">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+      <img (click)="cambiarImagen('../../../../IMG/web_basura_orilla_4f151f7a30.png')" src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+      <img (click)="cambiarImagen('../../../../IMG/web_basura_orilla_4f151f7a30.png')" src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+      <img (click)="cambiarImagen('../../../../IMG/logo/logo.png')" src="../../../../IMG/logo/logo.png">
+      <img (click)="cambiarImagen('../../../../IMG/web_basura_orilla_4f151f7a30.png')" src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
     </div>
     <!--Imagen principal-->
     <div class="irudiNagusi">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+      <img [src]="imagenActual" alt="Imagen dinamica">
     </div>
   </div>
-
+  <!--Texto-->
   <div class="texto">
     <h2>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia vitae expedita accusamus delectus iste voluptatem nisi?
