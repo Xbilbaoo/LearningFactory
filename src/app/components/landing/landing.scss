@@ -2,9 +2,10 @@
 .gorputza{
   width: 100%;
   height: auto;
+  background-image: url('../../../../public/IMG/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-top: 40px;
 }
 /*Estilo de los cards*/
@@ -16,7 +17,7 @@
   text-align: justify;
   align-items: center;
   padding: 10px;
-  opacity: 0.95;
+  opacity: 0.9;
   /*Estilos para el link*/
   a {
     display: none;
