@@ -1,0 +1,13 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "admin_user",
+            "email": "admin@learningfactory.com",
+            "fullName": "Admin Principal",
+            "role": "admin",
+            "password": "password123",
+            "avatar": "/public/IMG/logo/logo.png"
+        }
+    ]
+}
