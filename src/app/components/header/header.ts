@@ -22,8 +22,8 @@ export class Header {
       .subscribe(result => {
         this.isMobile = result.matches
         this.cd.detectChanges()
-      })  
-    }
+      })
+  }
 
   showMenu() {
 
@@ -54,6 +54,12 @@ export class Header {
         this.toggleDropdown = false
         break
 
+      case "login":
+
+        this.router.navigate(['/Login'])
+        this.toggleDropdown = false
+        break
+
       default:
 
         this.router.navigate(['/Home'])
@@ -61,7 +67,7 @@ export class Header {
         break
 
     }
-    
+
   }
 
 }
