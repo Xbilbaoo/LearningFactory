@@ -17,13 +17,13 @@ vision = true;
 cambiarImagen(img : string) {
   this.imagenActual=img;
   if(this.vision){
-    this.vision = false
+    this.vision = false;
   }
 }
 
 imagenb(img : string){
   this.imagenAnterior = this.imagenActual;
-  this.vision =true
+  this.vision =true;
 
   if(this.vision){
     this.imagenActual=img;
