@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { Carousel } from '../carousel/carousel';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-compra',
@@ -35,5 +36,16 @@ imagena(){
     this.imagenActual=this.imagenAnterior;
   }
 }
+  
+  constructor(private router: Router){}
 
-}
+  navigate(where: string) {
+
+    switch (where) {
+      case "form":
+
+        this.router.navigate(['/Form'])
+        break
+    }
+
+}}
