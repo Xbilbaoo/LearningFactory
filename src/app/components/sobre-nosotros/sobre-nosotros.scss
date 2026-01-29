@@ -1,0 +1,88 @@
+// Variables de colores
+$color-primario: #0f172a; // Color principal de títulos y elementos destacados
+$color-texto: #334155;    // Color general del texto
+$fondo-claro: #f8fafc;    // Color de fondo de la página
+
+// Contenedor principal, centra el contenido y limita el ancho máximo
+.contenedor {
+  width: 90%;           // Ocupa 90% del ancho
+  max-width: 1100px;    // Ancho máximo para pantallas grandes
+  margin: 0 auto;       // Centra horizontalmente
+}
+
+// Sección principal de Sobre Nosotros
+.seccion-sobre-nosotros {
+  padding: 4rem 0;      // Espaciado superior e inferior
+}
+
+// Tarjeta principal (card) de la sección
+.tarjeta-sobre-nosotros {
+  display: grid;                 // Usamos grid para separar imagen y contenido
+  grid-template-columns: 1fr 1.2fr; // Imagen 1fr, contenido 1.2fr
+  background: white;             // Fondo de la tarjeta
+  border-radius: 16px;           // Bordes redondeados
+  overflow: hidden;              // Evita que el contenido sobresalga de los bordes
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); // Sombra suave
+  margin-bottom: 4rem;           // Separación con elementos siguientes
+
+  // Imagen dentro de la tarjeta
+  &__imagen img {
+    width: 100%;       // Ocupa todo el contenedor
+    height: 100%;      // Altura completa
+    object-fit: cover; // Ajusta la imagen recortando si es necesario
+  }
+
+  // Contenido textual dentro de la tarjeta
+  &__contenido {
+    padding: 3rem;     // Espaciado interno
+
+    // Título principal
+    h1 {
+      color: $color-primario;  // Color del título
+      margin-bottom: 1rem;     // Separación inferior
+      font-size: 2rem;         // Tamaño del texto
+    }
+
+    // Párrafos dentro del contenido
+    p {
+      margin-bottom: 1rem;     // Separación entre párrafos
+      line-height: 1.7;        // Interlineado para mejor lectura
+    }
+  }
+}
+
+// Sección del mapa interactivo
+.mapa-ubicacion {
+  h2 {
+    text-align: center;      // Centra el título
+    color: $color-primario;  // Color del título
+    margin-bottom: 1.5rem;   // Separación inferior
+  }
+
+  // Contenedor del iframe del mapa
+  .contenedor-mapa {
+    width: 100%;             // Ocupa todo el ancho del contenedor
+    height: 400px;           // Altura fija
+    border-radius: 16px;     // Bordes redondeados
+    overflow: hidden;        // Oculta cualquier desbordamiento
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); // Sombra suave
+
+    // Mapa iframe
+    iframe {
+      width: 100%;           // Ocupa todo el contenedor
+      height: 100%;          // Altura completa
+      border: none;          // Sin borde
+    }
+  }
+}
+
+// Media query para pantallas pequeñas (responsive)
+@media (max-width: 768px) {
+  .tarjeta-sobre-nosotros {
+    grid-template-columns: 1fr; // Imagen y contenido en columna
+
+    &__contenido {
+      padding: 2rem;           // Reduce padding en móviles
+    }
+  }
+}

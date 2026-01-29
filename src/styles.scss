@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+/* SCSS HEX */
+$iron-grey: #404b4eff;
+$cool-steel: #87a1ab;
+$ivory: #fdfef1ff;
+$emerald: #73c27dff;
+$medium-jungle: #44ae56ff;
+
+/* SCSS HSL */
+$iron-grey: hsla(193, 10%, 28%, 1);
+$cool-steel: hsla(197, 18%, 60%, 1);
+$ivory: hsla(65, 87%, 97%, 1);
+$emerald: hsla(128, 39%, 61%, 1);
+$medium-jungle: hsla(130, 44%, 47%, 1);
+
+/* SCSS RGB */
+$iron-grey: rgba(64, 75, 78, 1);
+$cool-steel: rgba(135, 161, 171, 1);
+$ivory: rgba(253, 254, 241, 1);
+$emerald: rgba(115, 194, 125, 1);
+$medium-jungle: rgba(68, 174, 86, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-right: linear-gradient(90deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-bottom: linear-gradient(180deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-left: linear-gradient(270deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-top-right: linear-gradient(45deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #404b4eff,
+  #87a1abff,
+  #fdfef1ff,
+  #73c27dff,
+  #44ae56ff
+);
+$gradient-top-left: linear-gradient(225deg, #404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #404b4eff,
+  #87a1abff,
+  #fdfef1ff,
+  #73c27dff,
+  #44ae56ff
+);
+$gradient-radial: radial-gradient(#404b4eff, #87a1abff, #fdfef1ff, #73c27dff, #44ae56ff);
+
+body {
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  
+}

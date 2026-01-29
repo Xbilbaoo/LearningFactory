@@ -1,0 +1,142 @@
+@import '../../../styles.scss'; //Se importan la lista de colores de el archivo styles.scss
+
+#contactar { //se le añade las distancias minimas de la ventana
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out; // animación suave de 0.3s
+  overflow: hidden;
+}
+
+.contenedorContactanos { //Se le especifica la altura minima
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-color);
+
+  .columnaIzquierda { //se le pone una anchura y una foto de fondo a la columna de la izquierda
+    width: 50%;
+    min-height: 100vh;
+    background-color: white;
+    background-image: url('https://www.lactalis.com.mx/wp-content/uploads/2025/02/Learning-Factory.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .columnaDerecha { //se le especifica las distnacias y los colores de fondo a la columan general donde vaya a ir el formulario
+    width: 50%;
+    padding: 0 3.5rem;
+    min-height: 100vh;
+    background-color: $cool-steel;
+    border-radius: 5px;
+    display: flex; // necesario para justify-content
+    flex-direction: column; //se coloca el contenido de la columna de forma vertical
+    justify-content: center;
+
+    #formulario { //se le pone una anchura especifica en base a la anchura maxima de la columna
+      width: 31.25rem;
+      position: relative;
+    }
+  }
+}
+
+h5,
+button { //se especifican caracteristicas de los botones
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+h5 { //se personaliza el titulo para que sea acorde a nuestras peticiones
+  color: $iron-grey;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+}
+
+#labelForm {
+  color: $iron-grey;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.rellenar { // se configura la personalizacion del formulario
+  width: 40vw;
+  display: block;
+  color: var(--primary-color);
+  font-weight: 500;
+  background: $ivory;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0.3rem 0;
+  margin-top: 1rem;
+  outline: none;
+
+  &::placeholder { // añadiendole aqui un contenido dentro del mismo formulario
+    color: $cool-steel;
+  }
+
+  &:hover { // ademas de añadirle condiciones, como el hover
+    opacity: 0.5;
+  }
+}
+
+button { //se configura lo mismo para el boton
+  text-transform: uppercase;
+  font-weight: 300;
+  background: var(--button-color);
+  color: var(--bg-color);
+  width: 5rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover { //con sus dos condiciones
+    opacity: 0.5;
+  }
+
+  &:active {//con sus dos condiciones
+    opacity: 0.8;
+  }
+}
+
+p,
+.rellenar {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+  // h5 dentro de cualquier contenedor
+  h5 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  // inputs, textareas y botones con clase rellenar
+  .rellenar,
+  textarea,
+  button {
+    font-size: 0.88rem;
+  }
+
+  button {
+    width: 7rem;
+  }
+  .contenedorContactanos {
+
+    .columnaIzquierda {
+      display: none;
+    }
+
+    .columnaDerecha {
+      width: 100%;
+      padding-bottom: 25%;
+
+      #formulario {
+        margin-left: 20%;
+        width: 100%;
+      }
+    }
+  }
+}

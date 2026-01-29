@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.gorputza {
+  display: flex;
+  margin: 20px;
+  height: auto;
+  /*Estilo de las imagenes*/
+  /*Estilo del texto*/
+  /*Estilos bloque compra*/
+}
+.gorputza .irudiak {
+  display: flex;
+  width: 820px;
+}
+.gorputza .irudiak .irudiTxiki {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 96.4px 96.4px 96.4px 96.4px;
+  gap: 20px;
+  margin-right: 20px;
+}
+.gorputza .irudiak .irudiTxiki img {
+  width: 86.4px;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  /*Estilos al pasar por encima de las imagenes laterales*/
+}
+.gorputza .irudiak .irudiTxiki img:hover {
+  border: solid 2px #87A1Ab;
+  margin-right: -24px;
+  transform: scale(1.1);
+}
+.gorputza .irudiak .irudiNagusi {
+  width: 712px;
+  height: 446px;
+}
+.gorputza .irudiak .irudiNagusi img {
+  width: 100%;
+  height: 100%;
+}
+.gorputza .texto {
+  width: 340px;
+  margin-top: -20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: justify;
+}
+.gorputza .texto h6 {
+  color: #44AE56;
+}
+.gorputza .slider {
+  display: none;
+}
+.gorputza .compra {
+  width: 220px;
+  text-align: justify;
+  border: solid 2px #87A1Ab;
+  padding: 8px;
+  /*Estilos botones*/
+}
+.gorputza .compra h3 {
+  color: #44AE56;
+}
+.gorputza .compra button {
+  border-radius: 20px;
+  width: 100%;
+  justify-self: center;
+  padding: 8px;
+  background-color: #404B4E;
+  color: white;
+}
+
+.bloque {
+  margin: 20px;
+  text-align: justify;
+}
+
+/*Estilos en la pantalla pequeña*/
+@media screen and (max-width: 1100px) {
+  .gorputza {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .gorputza .irudiak {
+    display: none;
+  }
+  .gorputza .texto {
+    display: none;
+  }
+  .gorputza .slider {
+    display: block;
+  }
+  .gorputza .compra {
+    width: 100%;
+    padding: 0px;
+  }
+  .gorputza .compra h3, .gorputza .compra p {
+    margin: 12px;
+  }
+  .gorputza .compra button {
+    width: 80%;
+    margin-left: 8%;
+    margin-bottom: 6px;
+  }
+}/*# sourceMappingURL=compra.css.map */
