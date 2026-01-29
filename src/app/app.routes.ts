@@ -10,6 +10,7 @@ export const routes: Routes = [
     { path: 'Home', component: Landing },
     { path: 'About', component: SobreNosotros },
     { path: 'Buy', component: Compra },
-    { path: 'Login', component: Login }
+    { path: 'Login', component: Login },
+    { path: 'dashboard', component: UserListComponent, canActivate: [adminGuard] }
 
 ];

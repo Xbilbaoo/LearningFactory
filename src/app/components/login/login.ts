@@ -1,36 +1,50 @@
-import { Component, inject, signal } from '@angular/core';
-import { email, form, FormField, required, submit } from '@angular/forms/signals';
-import { Auth } from '../../services/user/auth';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Auth } from '../../services/auth';
+import { CommonModule } from '@angular/common';
 
-interface LoginData {
-  email: string;
-  password: string;
-}
 @Component({
   selector: 'app-login',
-  imports: [FormField],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
 export class Login {
 
-  private authService = inject(Auth)
+  private fb = inject(FormBuilder);
+  private authService = inject(Auth);
+  private router = inject(Router);
 
-  loginModel = signal<LoginData>({
-    email: '',
-    password: '',
+  errorMessage = '';
+
+  loginForm = this.fb.group({
+    username: ['', Validators.required],
+    password: ['', Validators.required]
   });
-  loginForm = form(this.loginModel, (schemaPath) => {
-    required(schemaPath.email, { message: 'Email is required' });
-    email(schemaPath.email, { message: 'Enter a valid email address' });
-    required(schemaPath.password, { message: 'Password is required' });
-  })
 
-  onSubmit(event: Event) {
-    event.preventDefault()
-    submit(this.loginForm, async () => {
-      const credentials = this.loginModel()
-      await this.authService.login(credentials)
-    });
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+      
+      this.authService.login(username!, password!).subscribe({
+        next: (isLoggedIn) => {
+          if (isLoggedIn) {
+            // Verificamos el rol antes de redirigir
+            const user = this.authService.currentUser();
+            
+            if (user?.role === 'admin') {
+              this.router.navigate(['/dashboard']);
+            } else {
+              this.router.navigate(['/home-user']); // O donde quieras enviar a 'user'
+            }
+            
+          } else {
+            this.errorMessage = 'Credenciales inválidas';
+          }
+        },
+        error: () => this.errorMessage = 'Error en el servidor'
+      });
+    }
   }
 }

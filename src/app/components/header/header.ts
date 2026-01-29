@@ -1,7 +1,8 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { Auth } from '../../services/auth';
 @Component({
   selector: 'header-component',
   imports: [CommonModule, RouterLink],
@@ -10,6 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Header {
 
+  public authService = inject(Auth)
   isMobile = false
   toggleDropdown = false
 
