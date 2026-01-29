@@ -28,25 +28,40 @@
 
   } @else {
 
-  <div class="logo">
-    <img src="IMG/logo/logo.png" alt="Logo" />
-    <h1>LearningFactory</h1>
-  </div>
-  <nav>
-    <ul>
-      <li><a [routerLink]="['/Home']">Home</a></li>
-      <li><a [routerLink]="['/About']">About Us</a></li>
-      <li><a [routerLink]="['/Buy']">Buy Now</a></li>
-      @if (authService.currentUser()?.role === 'admin') {
-        <a [routerLink]="['/Dasboard']">Panel Admin</a>
-      }
-      @if (!authService.currentUser()) {
-
-        <li><a [routerLink]="['/Login']">Log In</a></li>
+    <div class="logo">
+      <img src="IMG/logo/logo.png" alt="Logo" />
+      <h1>LearningFactory</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a [routerLink]="['/Home']">Home</a></li>
+        <li><a [routerLink]="['/About']">About Us</a></li>
+        <li><a [routerLink]="['/Buy']">Buy Now</a></li>
         
-      }
-      
-    </ul>
-  </nav>
+        @if (authService.currentUser(); as user) {
+          
+          @if (user.role === 'admin') {
+            <li>
+              <a [routerLink]="['/Dashboard']">Panel Admin</a>
+            </li>
+          }
+  
+          <li>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img [src]="user.avatar" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">
+              <span>{{ user.fullName }}</span>
+              <button (click)="authService.logout()" style="background:none; border:none; color: #ff6b6b; cursor: pointer; text-decoration: underline;">
+                Salir
+              </button>
+            </div>
+          </li>
+  
+        } @else {
+          <li><a [routerLink]="['/Login']">Log In</a></li>
+        }
+        
+      </ul>
+    </nav>
+
   }
 </header>

@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { UserService } from '../../services/user/UserService';
 import { User } from '../../models/user';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './user-list.html',
   styleUrl: './user-list.scss',
 })

@@ -28,12 +28,11 @@ export class UserService {
   }
 
   // 2.1 READ (Leer uno por ID)
-  getUserById(id: number | string): Observable<User> {
+  getUserById(id: string | number): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/${id}`);
   }
-
-  // 3. UPDATE (Actualizar)
-  updateUser(id: number | string, user: User): Observable<User> {
+  
+  updateUser(id: string | number, user: User): Observable<User> {
     return this.http.put<User>(`${this.apiUrl}/${id}`, user);
   }
 
