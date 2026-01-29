@@ -4,6 +4,7 @@ import { SobreNosotros } from './components/sobre-nosotros/sobre-nosotros';
 import { Compra } from './components/compra/compra';
 import { Login } from './components/login/login';
 import { adminGuard } from './guards/admin.guard';
+import { UserList } from './components/user-list/user-list';
 
 export const routes: Routes = [ 
 
@@ -12,6 +13,6 @@ export const routes: Routes = [
     { path: 'About', component: SobreNosotros },
     { path: 'Buy', component: Compra },
     { path: 'Login', component: Login },
-    { path: 'dashboard', component: UserList, canActivate: [adminGuard] }
+    { path: 'Dashboard', component: UserList, canActivate: [adminGuard] }
 
 ];

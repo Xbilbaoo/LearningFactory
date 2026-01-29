@@ -38,9 +38,14 @@
       <li><a [routerLink]="['/About']">About Us</a></li>
       <li><a [routerLink]="['/Buy']">Buy Now</a></li>
       @if (authService.currentUser()?.role === 'admin') {
-        <a [routerLink]="['/dasboard']">Panel Admin</a>
+        <a [routerLink]="['/Dasboard']">Panel Admin</a>
       }
-      <li><a [routerLink]="['/Login']">Log In</a></li>
+      @if (!authService.currentUser()) {
+
+        <li><a [routerLink]="['/Login']">Log In</a></li>
+        
+      }
+      
     </ul>
   </nav>
   }
