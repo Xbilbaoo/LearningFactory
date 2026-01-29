@@ -6,6 +6,7 @@ import { Login } from './components/login/login';
 import { adminGuard } from './guards/admin.guard';
 import { UserList } from './components/user-list/user-list';
 import { UserEdit } from './components/user-edit/user-edit';
+import { Formulario } from './components/formulario/formulario';
 
 export const routes: Routes = [ 
 
@@ -14,7 +15,8 @@ export const routes: Routes = [
     { path: 'About', component: SobreNosotros },
     { path: 'Buy', component: Compra },
     { path: 'Login', component: Login },
+    { path: 'Formulario', component: Formulario },
     { path: 'Dashboard', component: UserList, canActivate: [adminGuard] },
-    { path: 'user/edit/:id', component: UserEdit },
+    { path: 'user/edit/:id', component: UserEdit }
 
 ];
