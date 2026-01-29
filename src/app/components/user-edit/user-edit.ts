@@ -20,6 +20,9 @@ export class UserEdit implements OnInit {
   private userService = inject(UserService);
   private authService = inject(Auth);
 
+  // 1. Agrega esta variable para el "ojito"
+  showPassword = false;
+
   userId: string | number = '';
   currentUser = this.authService.currentUser(); // Obtenemos quién está logueado
   isAdmin = this.currentUser?.role === 'admin'; // Flag rápido
@@ -30,7 +33,7 @@ export class UserEdit implements OnInit {
     username: ['', Validators.required],
     role: ['user'], // Por defecto user
     avatar: [''],
-    password: [''] // Mantenemos la pass oculta pero presente
+    password: ['', [Validators.required, Validators.minLength(4)]] // Mantenemos la pass oculta pero presente
   });
 
   ngOnInit() {
@@ -80,6 +83,10 @@ export class UserEdit implements OnInit {
         this.router.navigate([this.isAdmin ? '/dashboard' : '/home']);
       });
     }
+  }
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
   }
 
   cancel() {
