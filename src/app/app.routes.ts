@@ -3,6 +3,7 @@ import { Landing } from './components/landing/landing';
 import { SobreNosotros } from './components/sobre-nosotros/sobre-nosotros';
 import { Compra } from './components/compra/compra';
 import { Login } from './components/login/login';
+import { adminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [ 
 
@@ -11,6 +12,6 @@ export const routes: Routes = [
     { path: 'About', component: SobreNosotros },
     { path: 'Buy', component: Compra },
     { path: 'Login', component: Login },
-    { path: 'dashboard', component: UserListComponent, canActivate: [adminGuard] }
+    { path: 'dashboard', component: UserList, canActivate: [adminGuard] }
 
 ];
