@@ -1,4 +1,4 @@
-.footer {
+.footer { //se añaden las especificaciones del footer general
   background-color: #1e1e1e;
   color: #f1f1f1;
   padding: 3rem 1.5rem 1.5rem;
@@ -6,23 +6,23 @@
 
   a {
     color: #4caf50;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    text-decoration: none; //se quita el subrayamiento de los enlaces
+    transition: color 0.3s; //se hace un pequeña "animacion" para el cambio de calor
 
     &:hover {
-      color: #81c784;
+      color: #81c784; //se especifica un color mas claro en el hover
     }
   }
 
-  &__container {
+  &__container { //se le ponen especificaciones al contenedor dentro del footer
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); //se le espeficia las columnas a generar y con sus tamaños maximos y minimos
     gap: 2rem;
   }
 
-  &__brand {
+  &__logo { //s le añaden especificaciones de el nombre y brrebve descripcion de la empresa
     h3 {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
@@ -37,7 +37,7 @@
   }
 
   &__links,
-  &__contact {
+  &__contact { //se le ponen especificaciones  a ambos, links y contactos
     h4 {
       font-size: 1.1rem;
       margin-bottom: 1rem;
@@ -60,7 +60,7 @@
     }
   }
 
-  &__bottom {
+  &__bottom { //se le añaden las especifica de la parte inferior del footer 
     border-top: 1px solid #333;
     margin-top: 2.5rem;
     padding-top: 1rem;
@@ -68,14 +68,13 @@
     font-size: 0.85rem;
     color: #aaaaaa;
 
-    .footer__eco {
+    .footer__detalles {
       margin-top: 0.3rem;
       color: #4caf50;
       font-weight: 500;
     }
   }
 
-  /* 📱 Media Query - Móvil */
   @media (max-width: 768px) {
     padding: 2rem 1rem 1rem;
 
@@ -84,7 +83,7 @@
       text-align: center;
     }
 
-    &__brand,
+    &__logo,
     &__links,
     &__contact {
       h4 {
