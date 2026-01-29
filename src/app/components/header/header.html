@@ -48,11 +48,13 @@
   
           <li>
             <div style="display: flex; gap: 10px; align-items: center;">
-              <img [src]="user.avatar" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">
-              <span>{{ user.fullName }}</span>
-              <button (click)="authService.logout()" style="background:none; border:none; color: #ff6b6b; cursor: pointer; text-decoration: underline;">
-                Salir
-              </button>
+              
+              <a [routerLink]="['/user/edit', user.id]" title="Editar mi perfil" style="cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <img [src]="user.avatar" style="width: 30px; height: 30px; border-radius: 50%;">
+                <span>{{ user.fullName }}</span>
+              </a>
+        
+              <button (click)="authService.logout()">Salir</button>
             </div>
           </li>
   

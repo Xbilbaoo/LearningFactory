@@ -34,9 +34,9 @@ export class Login {
             const user = this.authService.currentUser();
             
             if (user?.role === 'admin') {
-              this.router.navigate(['/dashboard']);
+              this.router.navigate(['/Dashboard']);
             } else {
-              this.router.navigate(['/home-user']); // O donde quieras enviar a 'user'
+              this.router.navigate(['/Home']); // O donde quieras enviar a 'user'
             }
             
           } else {

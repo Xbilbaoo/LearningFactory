@@ -5,6 +5,7 @@ import { Compra } from './components/compra/compra';
 import { Login } from './components/login/login';
 import { adminGuard } from './guards/admin.guard';
 import { UserList } from './components/user-list/user-list';
+import { UserEdit } from './components/user-edit/user-edit';
 
 export const routes: Routes = [ 
 
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'About', component: SobreNosotros },
     { path: 'Buy', component: Compra },
     { path: 'Login', component: Login },
-    { path: 'Dashboard', component: UserList, canActivate: [adminGuard] }
+    { path: 'Dashboard', component: UserList, canActivate: [adminGuard] },
+    { path: 'user/edit/:id', component: UserEdit },
 
 ];

@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { UserService } from '../../services/user/UserService';
 import { User } from '../../models/user';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -11,7 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class UserList {
 
+
   private userService = inject(UserService);
+  private router = inject(Router);
   
   // Usamos una Signal para almacenar los usuarios
   users = signal<User[]>([]);
@@ -48,4 +51,11 @@ export class UserList {
       this.users.update(current => [...current, userCreated]);
     });
   }
+
+  editUser(id: string|number) {
+
+    // Navegamos a la ruta que creamos antes: /user/edit/1, /user/edit/2, etc.
+    this.router.navigate(['/user/edit', id]);
+
+    }
 }

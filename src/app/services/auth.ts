@@ -34,7 +34,7 @@ export class Auth {
   logout() {
     localStorage.removeItem('user_session');
     this.currentUser.set(null);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/Home']);
   }
 
   // Métodos auxiliares privados

@@ -29,12 +29,12 @@ export class UserService {
 
   // 2.1 READ (Leer uno por ID)
   getUserById(id: string | number): Observable<User> {
-    return this.http.get<User>(`${this.apiUrl}/${id}`);
-  }
-  
-  updateUser(id: string | number, user: User): Observable<User> {
-    return this.http.put<User>(`${this.apiUrl}/${id}`, user);
-  }
+  return this.http.get<User>(`${this.apiUrl}/${id}`);
+}
+
+updateUser(id: string | number, user: User): Observable<User> {
+  return this.http.put<User>(`${this.apiUrl}/${id}`, user);
+}
 
   // 4. DELETE (Eliminar)
   deleteUser(id: number | string): Observable<void> {

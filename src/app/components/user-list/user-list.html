@@ -7,8 +7,10 @@
         <li>
           <img [src]="user.avatar" width="30" style="border-radius: 50%">
           <strong>{{ user.fullName }}</strong> ({{ user.role }})
+          <button (click)="editUser(user.id)">✏️ Editar</button>
           <button (click)="deleteUser(user.id)">Eliminar</button>
         </li>
+        
       } @empty {
         <li>No hay usuarios cargados.</li>
       }

@@ -1,0 +1,36 @@
+<div class="edit-container">
+    <h2>Editar Usuario</h2>
+    
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      
+      <div>
+        <label>Nombre Completo</label>
+        <input formControlName="fullName" type="text">
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input formControlName="email" type="email">
+      </div>
+
+      <div>
+        <label>Username</label>
+        <input formControlName="username" type="text">
+      </div>
+
+      @if (isAdmin) {
+        <div>
+          <label>Rol</label>
+          <select formControlName="role">
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+      }
+
+      <div class="actions">
+        <button type="submit" [disabled]="editForm.invalid">Guardar Cambios</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+      </div>
+    </form>
+  </div>
