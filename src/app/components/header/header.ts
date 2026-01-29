@@ -1,7 +1,8 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { Auth } from '../../services/auth';
 @Component({
   selector: 'header-component',
   imports: [CommonModule, RouterLink],
@@ -10,6 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Header {
 
+  public authService = inject(Auth)
   isMobile = false
   toggleDropdown = false
 
@@ -22,8 +24,8 @@ export class Header {
       .subscribe(result => {
         this.isMobile = result.matches
         this.cd.detectChanges()
-      })  
-    }
+      })
+  }
 
   showMenu() {
 
@@ -54,6 +56,12 @@ export class Header {
         this.toggleDropdown = false
         break
 
+      case "login":
+
+        this.router.navigate(['/Login'])
+        this.toggleDropdown = false
+        break
+
       default:
 
         this.router.navigate(['/Home'])
@@ -61,7 +69,7 @@ export class Header {
         break
 
     }
-    
+
   }
 
 }

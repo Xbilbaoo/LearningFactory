@@ -4,7 +4,8 @@
 /* SCSS RGB */
 /* SCSS Gradient */
 body {
-  background-color: rgb(253, 254, 241);
-  padding: 0px;
-  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=styles.css.map */

@@ -3,17 +3,32 @@
   <!--Imagenes laterales en la pantalla grande-->
   <div class="irudiak">
     <div class="irudiTxiki">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
-    </div>
+      <img (click)="cambiarImagen('../../../../IMG/web_basura_orilla_4f151f7a30.png')"
+           (mouseover)="imagenb('../../../../IMG/web_basura_orilla_4f151f7a30.png')"
+           (mouseleave)="imagena()"
+      src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
 
+      <img (click)="cambiarImagen('../../../../IMG/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.webp')"
+           (mouseover)="imagenb('../../../../IMG/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.webp')"
+           (mouseleave)="imagena()"
+      src="../../../../IMG/plastic-waste-quietly-gathers-ocean-unnoticed-by-marine-life.webp">
+
+      <img (click)="cambiarImagen('../../../../IMG/logo/logo.png')"
+           (mouseover)="imagenb('../../../../IMG/logo/logo.png')"
+           (mouseleave)="imagena()"
+      src="../../../../IMG/logo/logo.png">
+
+      <img (click)="cambiarImagen('../../../../IMG/web_basura_orilla_4f151f7a30.png')"
+           (mouseover)="imagenb('../../../../IMG/web_basura_orilla_4f151f7a30.png')"
+           (mouseleave)="imagena()"
+      src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+    </div>
+    <!--Imagen principal-->
     <div class="irudiNagusi">
-      <img src="../../../../IMG/web_basura_orilla_4f151f7a30.png">
+      <img [src]="imagenActual" alt="Imagen dinamica">
     </div>
   </div>
-
+  <!--Texto-->
   <div class="texto">
     <h2>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia vitae expedita accusamus delectus iste voluptatem nisi?
@@ -33,12 +48,13 @@
     </p>
   </div>
 
-  <!--Carrousel( Solo aparecera en la ventana pequeña )-->
+  <!--Carousel( Solo aparecera en la pantalla pequeña )-->
   <div class="slider">
     <app-carousel></app-carousel>
 
   </div>
 
+  <!--Bloque con informacion basica de la compra-->
   <div class="compra">
     <h3>€€</h3>
 

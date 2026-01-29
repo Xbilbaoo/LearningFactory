@@ -2,13 +2,14 @@
   padding: 10px;
   color: #FDFFE1;
   background-color: rgba(64, 75, 78, 0.8);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 .header div {
   display: flex;
@@ -22,8 +23,7 @@
 .header div button svg {
   transition: transform 0.5s;
 }
-.header div button svg:hover, .header div button svg:active {
-  cursor: pointer;
+.header div button svg:hover, .header div button svg:focus {
   transform: rotate(90deg);
 }
 .header div img {
@@ -52,7 +52,6 @@
   }
   .header nav {
     width: 100%;
-    display: none;
   }
   .header nav ul {
     display: flex;
@@ -68,6 +67,7 @@
     transition: transform 0.5s;
   }
   .header nav ul li a:hover {
+    cursor: pointer;
     transform: scale(1.2);
   }
 }/*# sourceMappingURL=header.css.map */
