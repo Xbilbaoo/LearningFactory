@@ -1,0 +1,25 @@
+.edit-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.edit-container div {
+  margin-bottom: 15px;
+}
+.edit-container div input,
+.edit-container div select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+.edit-container .actions {
+  display: flex;
+  gap: 10px;
+}
+.edit-container .actions button {
+  padding: 10px 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=user-edit.css.map */

@@ -20,7 +20,8 @@
 .tarjeta-sobre-nosotros__imagen img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tarjeta-sobre-nosotros__contenido {
   padding: 3rem;

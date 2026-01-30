@@ -14,8 +14,8 @@ export class Compra {
 
   constructor(private router: Router) { }
 
-  imagenActual: string = '../../../../IMG/web_basura_orilla_4f151f7a30.png';
-  imagenAnterior: string = '../../../../IMG/web_basura_orilla_4f151f7a30.png';
+  imagenActual: string = '../../../../IMG/fotos/Plastic-pelletizing-machine-2.jpg';
+  imagenAnterior: string = '../../../../IMG/fotos/Plastic-pelletizing-machine-2.jpg';
   vision = true;
 
   cambiarImagen(img: string) {
@@ -40,7 +40,7 @@ export class Compra {
     }
   }
 
-  
+
 
   navigate() { this.router.navigate(['/Formulario']); }
 }
