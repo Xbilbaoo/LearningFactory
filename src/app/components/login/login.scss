@@ -1,21 +1,79 @@
+// Reutilizamos las variables de color corporativas
+$primary-green: #4caf50;
+$dark-bg: #1e1e1e; // Del footer
+
 .login-container {
-    max-width: 300px;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
+  max-width: 400px;
+  margin: 10vh auto; // Centrado verticalmente un poco
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
 
-    div {
-        
-        margin-bottom: 1rem;
+  h2 {
+    color: $primary-green;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
 
-        input {
-            width: 100%;
-            padding: 0.5rem;
-        }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box; // Evita que el padding ensanche el input
+
+      &:focus {
+        border-color: $primary-green;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      }
     }
 
     .error {
-        color: red;
-        font-size: 0.8rem;
+      color: #d32f2f;
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      background: #ffebee;
+      padding: 0.5rem;
+      border-radius: 4px;
     }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background-color: $dark-bg;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover:not(:disabled) {
+        background-color: lighten($dark-bg, 10%);
+      }
+
+      &:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+      }
+    }
+  }
 }
