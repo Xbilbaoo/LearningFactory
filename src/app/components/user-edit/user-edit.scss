@@ -1,31 +1,118 @@
+// Variables basadas en header.scss y footer.scss
+$primary-green: #4caf50; // Del footer
+$dark-grey: #404b4e;     // Del header
+$light-bg: #fdffe1;      // Del header
+$error-red: #e53935;
+
 .edit-container {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  h2 {
+    color: $dark-grey;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid $primary-green;
+    padding-bottom: 0.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 
     div {
-        
-        margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-        input,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
+      label {
+        font-weight: bold;
+        color: $dark-grey;
+        font-size: 0.9rem;
+      }
+
+      input, select {
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-green;
         }
+      }
+    }
+
+    .password-container {
+      position: relative;
+      display: flex;
+      flex-direction: row; // Para alinear el input y el ojo
+
+      input {
+        width: 100%;
+        padding-right: 40px; // Espacio para el botón del ojo
+      }
+
+      .eye-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
     }
 
     .actions {
-        
-        display: flex;
-        gap: 10px;
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-direction: row;
 
-        button {
-            padding: 10px 20px;
-            cursor: pointer;
+      button {
+        flex: 1;
+        padding: 0.8rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: opacity 0.3s, transform 0.2s;
+
+        &[type="submit"] {
+          background-color: $primary-green;
+          color: white;
+
+          &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+          }
+          
+          &:hover:not(:disabled) {
+            opacity: 0.9;
+            transform: translateY(-1px);
+          }
         }
+
+        &[type="button"] {
+          background-color: transparent;
+          color: $dark-grey;
+          border: 1px solid #ccc;
+
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
     }
+  }
 }
